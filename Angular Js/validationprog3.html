@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <title>ng-switch program</title>
+</head>
+<body>
+
+    <div ng-app="">
+
+        <center><form>
+            <input type="radio" ng-model="myVar" value="html">HTML
+            <input type="radio" ng-model="myVar" value="css">CSS
+            <input type="radio" ng-model="myVar" value="angular">Angular JS
+        </form>
+        
+        <div ng-switch="myVar">
+            <div ng-switch-when="html">
+                <h1 style="color:red;">HTML</h1>
+                <p style="color:green; font-size:20px;">HTML stands for hyper text markup language</p>
+                <img src="C:\Users\SAHIL\Downloads\tatamotors.jpg">
+            </div>
+
+            <div ng-switch-when="css">
+                <h1 style="color:orange;">CSS</h1>
+                <p style="color:orangered; font-size:20px;">CSS stands for Cascading Styling Sheet</p>
+                <img src="C:\Users\SAHIL\Downloads\wp5628643-mahakal-4k-wallpapers.jpg" width="380px" height="390px">
+            </div>
+
+            <div ng-switch-when="angular">
+                <h1 style="color:darkgreen;">Angular Js</h1>
+                <p style="color:brown; font-size:20px;">Angular JS is a javascript framework</p>
+
+                <img src="C:\Users\SAHIL\Downloads\mahadevimg.jpg">
+            </div>
+
+        </div>
+    </center>
+   
+    </div>
+</body>
+</html>

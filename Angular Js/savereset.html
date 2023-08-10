@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <title>save and reset</title>
+</head>
+<body>
+
+    <div ng-app="myNoteApp" ng-controller="myNoteCtrl">
+        <textarea ng-model="message" cols="80" row="20" style="background-color:lightblue;color:yellow;"></textarea>
+        <p align="center">
+            <button ng-click="save()">Save</button>
+            <button ng-click="reset()">Reset</button>
+        </p>
+    </div>
+
+    <script>
+            var app = angular.module('myNoteApp',[]);
+        app.controller('myNoteCtrl',function($scope){
+            $scope.save = function(){
+                    window.alert("saved")
+                    }
+
+            $scope.reset = function(){
+                    $scope.message = "";
+                     window.alert("reset the note")
+                    }
+            });
+    </script>
+</body>
+</html>

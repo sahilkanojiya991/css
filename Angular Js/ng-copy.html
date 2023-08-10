@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <title>ng-copy</title>
+</head>
+<body>
+
+    <div ng-app >
+        <div ng-init="isCopy=false; copy='Copy This Text!!'">
+            <textarea ng-copy="isCopy=true" ng-model="copy"></textarea>
+            <br>
+
+            <pre> Copies Status : {{isCopy}}</pre>
+        </div>
+    </div>
+</body>
+</html>

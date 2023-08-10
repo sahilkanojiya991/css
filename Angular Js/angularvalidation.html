@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <title>Validations Prog1</title>
+</head>
+<body>
+    
+<center><h2 style="font-size:20px; color:brown; text-shadow:2px 2px 5px black; font-style:italic;">Angular Js Form Validation</h2>
+
+    <form ng-app="myApp" ng-controller="validateCtrl" name="myForm" novalidate>
+
+        <p>Username:<br>
+        <input type="text" name="user" ng-model="user" required>
+        <span style="color:purple;" ng-show="myForm.username.$dirty && myForm.username.$invalid">
+        <span ng-show="myForm.user.$error.required">Username is required.</span>
+        </span>
+        </p>
+
+        <p>Email:<br>
+        <input type="email" name="email" ng-model="email" required>
+        <span style="color:purple;" ng-show="myForm.email.$dirty && myForm.email.$invalid">
+        <span ng-show="myForm.email.$error.required">Email is required.</span>
+        <span ng-show="myForm.email.$error.email">Email Address is Invalid.</span>
+        </span>
+        </p> 
+
+          <p>password:<br>
+        <input type="text" name="password" ng-model="password" required>
+        <span style="color:purple;">
+         <span style="color:purple;" ng-show="myForm.password.$dirty && myForm.password.$invalid">
+    </br>
+         <span ng-show="myForm.password.$error.required">Password must contain atleast one special character and a No:</span>
+        </span>
+        </p>
+
+         <p>Re-Enter-password:<br>
+        <input type="text" name="Re-Enter-password" ng-model="Re-Enter-password" required>
+        <span style="color:purple;">
+         <span style="color:purple;" ng-show="myForm.Re-Enter-password.$dirty && myForm.Re-Enter-password.$invalid">
+    </br>
+         <span ng-show="myForm.Re-Enter-password.$error.required">Password must be same as enter preveious one</span>
+        </span>
+        </p>
+
+
+         <p>Address:<br>
+        <input type="text" name="address" ng-model="address" required>
+        <span style="color:purple;" ng-show="myForm.address.$dirty && myForm.address.$invalid">
+        <span ng-show="myForm.user.$error.required"> valid address is required.</span>
+        </span>
+        </p>
+
+        <p>
+            <input type="submit" ng-disabled="myForm.user.$dirty && myForm.user.$invalid || myForm.email.$dirty && myForm.email.$invalid">
+        </p>
+    </form></center>
+
+    <script>
+
+        var app = angular.module('myApp',[]);
+        app.controller('validateCtrl',function($scope){
+                   
+        });
+    
+    </script>
+    
+</body>
+</html>

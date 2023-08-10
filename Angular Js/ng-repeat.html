@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <title>Directive ng-repeat</title>
+</head>
+<body>
+
+    <div ng-app="myApp" ng-controller="myCtrl">
+        <ol type="A">
+            <li ng-repeat= "x in names">{{x}}</li>
+        </ol>
+
+    </div>
+
+    <script>
+        var app = angular.module('myApp',[]);
+        app.controller('myCtrl',function($scope){
+
+            $scope.names= ["Sahil","vikas","Ashraf","karishma"];
+
+            });
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <style>
+        table{
+            border: 3px solid black;    
+                }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <title>Table Prog1</title>
+</head>
+<body>
+
+    <center><h2 style="color:red;">Angular Sample Application</h2>
+    <div ng-app="mainApp" ng-controller="studentController">
+
+    <table border = "3px solid green">
+        <tr>
+            <td style="background-color:yellow;">Enter First Name:</td>
+            <td><input type="text" ng-model ="student.firstName"></td>
+        </tr>
+        <tr>
+            <td>Enter Last Name:</td>
+            <td><input type="text" ng-model ="student.lastName"></td>
+        </tr>
+        <tr>
+            <td>Name : </td>
+            <td>{{student.fullName()}}</td>
+        </tr>
+        <tr>
+            <td>Subjects : </td>
+            <td>
+
+                <table style="background-color:yellow;">
+                    <tr >
+                        <th style="background-color:orange;">Name</th>
+                        <th style="background-color:orange;">Marks</th>
+                    </tr>
+                    <tr ng-repeat = "subject in student.subjects">
+                        <td>{{subject.name}}</td>
+                        <td>{{subject.marks}}</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    </div></center>
+    <script>
+        var app = angular.module('mainApp',[]);
+        app.controller('studentController',function($scope){
+
+            $scope.student={
+                firstName:"sahil",
+                lastName:"Kanojiya",
+                fees:50000,
+                subjects:[
+                    {name:'Physics',marks:70},
+                    {name:'Chemistry',marks:80},
+                    {name:'Math',marks:100},
+                    {name:'English',marks:75},
+                    {name:'Hindi',marks:67},
+                    ],
+                fullName: function(){
+                        var studentObject;
+                        studentObject = $scope.student;
+                        return studentObject.firstName + " " + studentObject.lastName;
+                        }    
+                    }
+            });
+    </script>
+</body>
+</html>

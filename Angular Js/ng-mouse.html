@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <title>ng-Mouse Events</title>
+</head>
+<body>
+
+    <div ng-app="" >
+        
+        MouseDown  : <input type="text" ng-mousedown="x=x+1" ng-init="x=0">
+        <p>{{x}}</p>
+        
+        MouseEnter  : <input type="text" ng-mouseenter="y=y+1" ng-init="y=0">
+        <p>{{y}}</p>   
+
+        MouseLeave  : <input type="text" ng-mouseleave="z=z+1" ng-init="z=0">
+        <p>{{z}}</p>
+
+
+        MouseMove  : <input type="text" ng-mousemove="i=i+1" ng-init="i=0">
+        <p>{{i}}</p>  
+
+
+        MouseOver  : <input type="text" ng-mouseover="j=i+1" ng-init="j=0">
+        <p>{{j}}</p>  
+
+
+    </div>
+</body>
+</html>

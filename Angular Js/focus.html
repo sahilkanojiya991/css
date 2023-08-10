@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <title>Blur Events</title>
+</head>
+<body>
+
+    <div ng-app="" >
+        Blur : <input type="text" ng-blur="x=x+1" ng-init="x=0">
+        <p>{{x}}</p>
+
+
+        Focus : <input type="text" ng-focus="y=y+1" ng-init="y=0">
+        <p>{{y}}</p>
+        
+    </div>
+</body>
+</html>

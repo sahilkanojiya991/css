@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <title>Module Prog1</title>
+</head>
+<body>
+
+    <div ng-app="">
+        <table>
+            <tr>
+                <td><input type="checkbox" ng-model ="eh">Disable Button</td>
+                <td><button ng-disabled="eh">Click Me!</button></td>
+            </tr>
+
+
+            <tr>
+                <td><input type="checkbox" ng-model ="showHide1">Show Button</td>
+                <td><button ng-show="showHide1">Click Me!</button></td>
+            </tr>
+
+
+            <tr>
+                <td><input type="checkbox" ng-model ="showHide2">Hide Button</td>
+                <td><button ng-hide="showHide2">Click Me!</button></td>
+            <tr>      
+
+
+            <tr>
+                <td><p>Total Click :{{clickCounter}}</p></td>
+                <td><button ng-click="clickCounter = clickCounter + 1">Click Me!</button></td>
+            </tr>
+        </table>
+    </div>
+
+</body>
+</html>

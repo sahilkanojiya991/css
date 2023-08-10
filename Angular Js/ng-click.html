@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <title>ng-click</title>
+</head>
+<body>
+
+    <div ng-app="" >
+        Single - Click : <input type="button" value="Click Me!" ng-click="x=x+1" ng-init="x=0">
+        <p>{{x}}</p>
+        
+        <h1 ng-dblclick="y=y+1" ng-init="y=0">Double Click Me to add the number below</h1>
+        <p>{{y}}</p>        
+    </div>
+</body>
+</html>

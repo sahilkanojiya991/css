@@ -1,0 +1,91 @@
+<html>
+<head>
+    <title>  Animations</title>
+    <style>
+
+        @keyframes bounce {
+                from{
+                    transform:translateX(40px);
+                        }
+
+
+                to{
+                    transform:translateX(10px);
+                        }
+
+                    }
+
+        .box{
+             animation:bounce 500ms alternate infinite cubic-bezier(.4,.80,.8,.5);
+             display:flex;
+         }
+
+        .box.one{
+                --jump-offset: -20px;
+                  animation-duration:200ms;
+
+                    }
+        .box.two{
+                 --jump-offset: -20px;
+                  animation-duration:400ms;
+
+                    }
+
+                .box.three{
+                 --jump-offset: -20px;
+                  animation-duration:600ms;
+                    } 
+        html{
+          height: 100%;
+          }                       
+
+        body{
+                padding:32px 0;
+                height:100%;
+                display:grid;
+                place-content:center;
+
+                }
+
+      
+
+        .box{
+            width:85px;
+            height:85px;
+            background:burlywood;
+            padding:15px;
+            display:grid;
+            place-content:center;
+            color:darkviolet;
+            text-align:center;
+            border-radius:70%;
+                }
+
+    
+           
+     
+    </style>    
+</head>
+
+<body>
+
+    
+    <div class="box">
+        <p>Hello World</p>
+       </div>
+
+    <div class="box one">
+        <p>heyyy</p>
+       </div>
+
+    <div class="box two">
+        <p>World</p>
+       </div>
+
+    <div class="box three">
+        <p>lord</p>
+       </div>
+
+
+</body>
+</html>

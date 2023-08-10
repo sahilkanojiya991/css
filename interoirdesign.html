@@ -1,0 +1,368 @@
+<!Doctype.html>
+<html>
+<head>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<title>webpage interior desigen </title>
+</head>
+<style>
+
+* { 
+   margin:0;
+   padding:0;
+   font-family:sans-serif;
+   }
+
+
+.banner{
+         width:100%;
+         height:600vh;
+         background-image:linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(https://www.azuremagazine.com/wp-content/uploads/2022/03/Azure-Interior-Design-Show-Toronto-2022-Event-Thumbnail.jpg);
+         background-size:cover;
+         background-center:center;  
+         } 
+
+
+               .navbar a:hover{
+
+                         color:orange;
+                         background-color:black;
+                         border-radius:25px;
+
+            }          
+
+ .navbar{
+ 	   width:85% ;
+ 	   margin:auto ;
+ 	   padding: 35px 0;
+ 	   display:flex;
+ 	   align-items:center;
+ 	   justify-content:space-between; 
+
+ 	}
+
+ .logo{
+      width:80%;
+      cursor:pointer;
+      }
+
+             @keyframes color-change  {
+                0%{color:orange;}
+                25%{color:burlywood;}
+                50%{color:brown;}
+                75%{color:yellowgreen;}
+                100%{color:orange;}
+            }
+
+    h1,h3,h4,h5{
+        animation:color-change 5s ease-in infinite;
+            }        
+
+
+  .navbar ul li{
+     list-style:none ;
+     display:inline-block ;
+     margin: 0 20px; 
+
+    }   
+
+
+.navbar ul li a{
+	  text-decoration:none;
+	  color:white;
+	  text-transform:uppercase;
+	}
+
+
+.navbar ul li::after{
+
+	         content:'';
+	         height:3px;
+	         width:0;
+	         background:#009688;
+	         position:absolute;
+	         left:0;
+	         bottom:-10px;
+	         transform:0.5s;
+}
+ 
+ .navbar ul li:hover::after{
+ 	   width:100%;
+
+  }
+
+
+  .contain{
+  	  width:100% ;
+  	  position:absolute ;
+  	  top:50% ;
+  	  transform:translateY(-50px);
+  	  text-align:center ;
+  	  color:orange;
+  }
+
+  p{
+  	color:lightpink;
+  	font-style:oblique;
+  	font-weight:8%;
+  }
+ 
+ .contain h1{
+ 	         font-size:50px;
+ 	         margin-top: 80px;
+ }
+
+ .contain p{
+ 	          margin: 22px auto;
+ 	          font-weight:100;
+ 	          line-height:25px;
+ 	          font-family:unset ;
+
+ }
+
+
+ button{
+       width:200px ;
+       padding:15px 0 ;
+       text-align:center ;
+       border-radius:25px ;
+       margin:20px 10px ;
+       font-weight:bold;
+       border:2px solid purple ;
+       background:transparent;
+       color:orange ;
+       cursor:pointer;
+       position: relative;
+       overflow:hidden;
+       transition: transform 1s;
+ }
+
+ span{
+      background: purple;
+      height:100%;
+      width:0;
+      border-radius:25px;
+      position:absolute ;
+      left:0;
+      bottom:0;
+      z-index:-1;
+      transition:0.5s;	
+
+ }
+
+ button:hover span{
+ 	      width:100%;
+ }
+
+
+ button:hover{
+ 	    border:none;
+        transform:scale(1.4);
+ 
+ }
+
+            hr {
+                width: 40%;
+                margin-left: auto;
+                margin-right: auto;
+                border-top: 3px solid floralwhite;
+                background-color:peachpuff;
+            }
+         
+   h1{
+   	  color:orange;
+   	  text-align:center;
+   	  cursor:pointer;
+   	   font-weight:bold;
+   	  margin:20px auto;
+   }  
+      
+  label{
+  	   color:orange;
+  	   font-family:cursive;
+  	   font-size:medium;
+  	   border-radius:10px;
+  	   padding-left:60px;
+  } 
+                 
+  h5{
+  	  font-size:120%;
+  	  font-family:cursive;
+  	  color:burlywood;  	  
+
+  } 
+
+  img{
+    transition: transform 1s; 
+  }
+
+
+
+ img:hover span{
+          width:100%;
+ } 
+
+
+ img:hover{
+        border:none;
+        transform:scale(1.2);
+ 
+ }
+
+ .name{
+     display:inline-flex;
+ }
+
+
+
+</style>
+
+<body>
+
+<div class="banner">
+<div class="navbar">
+
+<left><img src="https://bcassetcdn.com/public/blog/wp-content/uploads/2019/09/18094346/the-home-interior.png"  class="logo"  width="80px" height="80px"></left>
+ 
+<h5  data-aos="fade-right">InTeRiOr DeSiGn   DeSiGn-YoUr IdEa </h5>
+
+
+<ul>
+
+<li><a href="home.html">livingroom</a></li>
+
+<li><a href="bedroom.html">Bedroom</a></li>
+
+<li><a href="designroom.html">Designroom</a></li>
+
+<li><a href="bathroom.html">Bathroom</a></li>
+
+<li><a href="kitchen.html">Kitchen</a></li>
+
+</ul>
+
+</div>
+
+
+<h1>Fill Details</h1>
+
+<label>Name</label>
+<input type="text" id="name" name="Name">
+<label>Email</label>
+<input  type="email" id="email" name="Email">
+<label>Address</label>
+<input  type="location" id="address" name="Adress">
+<label>contact no</label>
+<input  type="contact no" id="number" name="Contact no">
+
+
+          <center><button  type="button">SUBMIT</button></center>
+
+
+</form>
+
+
+<div class="contain">
+
+	<h1>DESIGN YOUR HOUSE</h1>
+	<hr>
+    
+
+	<marquee direction="up"><P>At HomeLane, we believe that interior design is more than great functionality and beautiful aesthetics. We aim to make your home interiors a reflection of your personality<br>. Your home should be something that you and your family take pride in and love to spend time in.<br>Our efficient, customized home interior designs incorporate your needs in every nook of your home, so your space meets your every requirement.</P></marquee>
+
+    <img src="https://super.homelane.com/other interiors/16364324986456a596bb2b958-HLKT00000761_resize-800x600_2-main.jpg" width="300px" height="200px" data-aos="flip-left">
+
+<div>
+	<button type="button"><span></span>Watch More</button>
+	<button type="button"><span></span>Sign in</button>
+</div>
+
+
+<img src="https://super.homelane.com/products/07dec18/homeinteriors/3.jpg" width="300px" height="200px" data-aos="flip-right">
+<br><br>
+
+
+ <div class="completeHomeInteriro"><h3 class="completeHome">Complete home interiors in 3 easy steps</h3><br><div class="completeHomeInteriro"><span class="completeHome">1</span><span class="completeHome">2</span><span class="completeHomeInteriro">3</span></div><div class="completeHomeInterior"><div class="completeHome"><h3 class="completeHomeInteriro">Discover</h3><p class="completeHomeInter">Explore more than just modular design ideas with our experts.</p></div><div class="completeHomeInteriro"><h3 class="completeHomeInter">Design</h3><p class="completeHome">Complete the designs with painting, flooring and other decor solutions.</p></div><div class="completeHomeInterir"><h3 class="completeHome">Move-in</h3><p class="completeHomeInter">Move in with ease, with our hassle-free civil work and installation services.</p></div></div><div class="completeHome"><span class="completeHome"></span><span class="completeHomeInter"></span><span class="completeHome"></span></div></div>
+
+
+        <img src="https://super.homelane.com/homepage/CompleteHI-03.png" class="completeHome" width="300px" height="300px" data-aos="zoom-in-down">
+
+
+           <h1>About home interior Design</h1>
+
+            <marquee direction="up"><p>
+At HomeLane, we believe that interior design is more than great functionality and beautiful aesthetics. We aim to make your home interiors a reflection of your personality. Your home should be something that you and your family take pride in and love to spend time in. Our efficient, customized home interior designs incorporate your needs in every nook of your home, so your space meets your every requirement. Our dedicated home interior designers work with you tirelessly to tie your style with their design expertise, creating the perfect interior design plan. They will also ensure that the plan is executed using the materials of the highest standards. In addition to great interior design ideas, you can expect our unwavering support and service for years to come because all our products come with up to 10 year warranty. Think we are the right fit for your journey to your new home? Get a free estimate or a book a free consultation with our interior design team for beautiful home interiors. We offer interior design ideas for living room, bedroom and kitchen. We specialize in complete modular kitchens, stunning wardrobe designs, timeless TV unit designs, and space-saving furniture among other. What’s more, we guarantee beautiful interiors delivered in 45 days or we pay you rent.</p></marquee>
+
+
+<h1>End-to-End interior solutions</h1>
+<marquee direction="up"><p>Modular Kitchen , Storage and wardrobe , Crockery Units, Space Saving Furniture , TV Units , False Ceiling , Wall Paint , Pooja Unit , Foyer Designs , Movable furniture ,  Kids Bedroom</p></marquee>
+
+
+       <div class="name">
+       <figure>
+       <img src=https://super.homelane.com/wardrobes/1642061646574eca227300dc1-HLKT00000765_new-size-800x600_1-main.jpg alt="luxurious Bedroom" width="300px" height="200px" data-aos="fade-right">&nbsp;&nbsp;&nbsp;&nbsp;<figcaption style="color:peachpuff;font-size:20PX; font-style:italic">LUXRIOUS ROOM</figcaption></figure></div>
+
+       <div class="name">
+       <figure>
+       <img src=https://super.homelane.com/wardrobes/16394698547170f7f64cd6915-HLKT00000760_resize-800x600_16-main.jpg  alt="luxurious Bedroom"  width="300px" height="200px" data-aos="zoom-in-up">&nbsp;&nbsp;&nbsp;&nbsp;<figcaption style="color:peachpuff; font-style:italic; font-size:20px">INTERIOR DESIGN</figcaption></figure></div>
+
+      <div class="name">
+      <figure>
+    <img src="https://super.homelane.com/wardrobes/163946990581933edfeed84bc-HLKT00000759_resize-800x600_18-main.jpg"  alt="luxurious Bedroom" width="300px" height="200px" data-aos="fade-left">&nbsp;&nbsp;&nbsp;&nbsp;<figcaption style="color:peachpuff; font-style:italic; font-size:20px">BEDROOM DESIGN</figcaption></figure></div>
+
+
+             
+             <h1>Contact us</h1>
+
+             <p><a href="" style="text-decoration:none;color:lightpink;"> Support
+                   Raise issue<br><br>
+                    My issues<br><br>
+                   Contact us<br><br>
+                   FAQs</a><br><br></p>
+
+           
+               <h4 class="footer">Up to <!-- -->10<!-- -->-year warranty</h4>
+
+                  <img src="https://super.homelane.com/covidbanner-mob-2104-3.png"  width="350px" height="350px" data-aos="fade-right">&nbsp;&nbsp;
+                  <img src="https://renjithassociates.com/wp-content/themes/renjith/assets/images/talktodesigner.png"  width="250px" height="250px" data-aos="fade-down">&nbsp;&nbsp;
+                  <img src="https://super.homelane.com/scvm-banner-030521.png"  width="250px" height="250px" data-aos="fade-left">&nbsp;&nbsp;
+                  
+                  
+
+               <p class="footer">Choose interiors designed with superior quality material, leaving no room for defects.</p>
+
+               <h>Stay safe. Design virtually.</h><br><br>
+
+                <div class="right-info">
+                    <a href=""><img src="https://pngimg.com/uploads/facebook_logos/facebook_logos_PNG19757.png" alt="facebook"
+                    width="30px" height="30px"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+                    
+                    <a href=""><img src="https://pluspng.com/img-png/twitter-png-logo-twitterbird-1528.png" alt="Twitter"
+                     width="30px" height="30px"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+
+                    <a href=""><img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.JtmXSh_uyZBaTg1eXd-NtgHaHa%26pid%3DApi&f=1"
+                     alt="Insta" width="30px" height="30px"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+
+                    <a href=""><img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.FULyCAEByEOl2xOgUWHnQgHaFO%26pid%3DApi&f=1" alt="youtube"
+                     width="30px" height="30px"></a>
+                </div><br><br>
+
+
+          <a href="" style="text-decoration:none;color:lightpink;"><footer>@copyright 2022</footer></a><br>
+
+          <a href="" style="text-decoration:none;color:lightpink;"><footer>+91-9993336241</footer></a><br>
+
+
+          <h5>ThAnKs FOr VIsItInG oUr WeBsItE</h5>  
+
+          <button id="bfc" type="submit">BOOK FREE DESIGN SESSION</button>
+
+          <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+          <script>
+            AOS.init({
+             offset:200,
+             duration:1100
+            });
+      </script>
+
+<body>
+</html>

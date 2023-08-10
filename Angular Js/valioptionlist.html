@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <title>Validations optionlist</title>
+</head>
+<body>
+
+    <div ng-app="">
+
+        <center><form>
+             select any one in list:
+            <select ng-model="myVar">
+                <option value="html">HTML
+                <option value="css">CSS
+                <option value="angular">Angular JS
+            </select>
+        </form>
+
+        <div ng-switch="myVar">
+            <div ng-switch-when="html">
+                <h1 style="color:orange;">HTML</h1>
+                <p style="color:red; font-size:20px;">HTML stands for hyper text markup language</p>
+            </div>
+
+            <div ng-switch-when="css">
+                <h1 style="color:green;">CSS</h1>
+                <p style="color:darkviolet; font-size:20px;">CSS stands for Cascading Styling Sheet</p>
+            </div>
+
+            <div ng-switch-when="angular">
+                <h1 style="color:darkkhaki;">Angular Js</h1>
+                <p style="color:darkblue; font-size:20px;">Angular JS is a javascript framework</p>
+            </div>
+
+        </div>
+    </center>
+   
+    </div>
+</body>
+</html>

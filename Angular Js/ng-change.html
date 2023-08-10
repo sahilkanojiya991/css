@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <title>ng-change Events</title>
+</head>
+<body>
+
+    <div ng-app="demo" ng-controller="app" >
+        <input type="checkbox" ng-change="show()" ng-model="check">
+        <br><br>
+
+        <div style="height:400px;color:black;background-color:orange;border-radius:40px;line-height:90px" ng-show="result">
+            <h1>ASDADADASDASDAS<h1>
+        
+            <p>ASDFASDSAAS asd asd as das das dasoi dhaspydf asfydausfdas<br>
+                asdas dawsf yasd ydasu fdasydas yfasi yfdas yfd9as fydas89y<br>
+                sadhf 2 asf das;fjc,sd fhdasm.
+            </p>
+            
+        </div>
+    </div>
+
+    <script>
+        var app = angular.module('demo',[]);
+        app.controller('app',function($scope){
+            $scope.show = function (){
+                if($scope.check == true)
+                    $scope.result = true;
+                else
+                    $scope.result = false;
+                };
+        
+            });
+        
+    </script>
+</body>
+</html>

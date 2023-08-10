@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script
+            src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+        <title>prog5</title>
+    </head>
+    <body>
+        <p> Change Color Of The Input Field:</p>
+        <div ng-app="" ng-init="myCol='#c665e2'">
+
+            <input type="text" style="background-color:{{myCol}};height:20px;" ng-model="sss">
+            <input type="checkbox" style="background-color:{{myCol}};" ng-model="aaa">
+            <p> <span ng-bind="sss"></span></p>
+            <p> input : {{sss}}</p>
+
+
+            
+            <p> <span ng-bind="aaa"></span></p>
+            <p> input : {{aaa}}</p>
+        </div>
+    </body>
+</html>

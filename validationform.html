@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+ <title>Form Validation</title>
+    <head>
+        
+        <style>
+            h1{
+                font-size: 40px;
+            }
+            span{
+                color:rgb(185, 9, 9);
+            }
+            body{
+                font-family: 'Montserrat', sans-serif;
+                background-color: 
+                #CBC9F1;
+            }
+
+            input{
+
+                width:310px;
+                height:25px;
+                font-size: 20px;
+            }
+
+
+            .container{
+                min-height:1000px;
+                width:100%;
+                display:flex;
+               justify-content:center;
+            }
+
+            .image,.form{
+                height: 710px;
+                min-width: 40%;
+            }
+
+            .image{
+                background-size: cover;
+                border-right: none;
+
+            }
+            .form{
+                padding-left: 50px;
+                font-size: 22px;
+                background-color:violet;
+                border-left: none;
+                              
+            }
+
+            #hr1{
+                width:60%;
+            }
+            #google,#facebook{
+                width:100px;
+                height:50px;
+            }
+            #submit{
+
+                width:400px;
+                height:40px;
+                font-size: 25px;
+                background-color:#BA54EB;
+                color:white;
+                border:none;
+                transition: all 1s;
+            }
+            #submit:hover{
+
+                transform:scale(1.1);
+                background-color:pink;
+                color:black;
+
+            }
+
+        </style>
+
+       
+    </head>
+
+    <body>
+
+        <center><h1>Toyota CoNcept I-Series -<span> Fill Details</span></h1></center>
+
+        <div class="container">
+
+
+            <div class="image"></div>
+
+            
+                  <img src="https://cdn.dribbble.com/users/4524800/screenshots/16033292/dribbble_4x.jpg" width="500px" height="710px">
+
+             <div class="form">
+                <h3>Get Started</h3>
+                <p>Already Have an Account?</p>
+                <hr id="hr1">
+                <b><p>Log In</p></b>
+
+
+                <center>
+                    <button type="button" style="cursor:pointer;" ><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTF3KxPIhWYC1OxKY4UnrWZJPucTKOBu_HFaQ&usqp=CAU" alt="google" width="50px" height="50px"></button>
+                    &nbsp;&nbsp;&nbsp;
+                    <button type="button" style="cursor:pointer;"><img src="https://toppng.com/uploads/preview/facebook-logo-fb-crack-break-effect-11536001509xp2y6r1ttg.png" alt="facebook" width="50px" height="50px"></button><br>
+                    <br>
+                    Or
+                </center>
+
+                <form action="" name="form" onsubmit="return validateForm()"
+                    method="post">
+                    <b>
+                        Name: <br>
+                        <input type="text" onfocus="highlightInput(this)"
+                            onblur="newFunc(this)"
+                            name="username"><br><br>
+
+                        Email: <br>
+                        <input type="email" onfocus="highlightInput(this)"
+                            onblur="newFunc(this)" name="email"><br><br>
+
+                        Address: <br>
+                        <input type="address" onfocus="highlightInput(this)"
+                            onblur="newFunc(this)"
+                            name="address"><br><br>    
+
+                        Password: <br>
+                        <input type="password" onfocus="highlightInput(this)"
+                            onblur="newFunc(this)"
+                            name="password"><br><br>
+
+                        Re-Enter Password: <br>
+                        <input type="password" onfocus="highlightInput(this)"
+                            onblur="newFunc(this)"
+                            name="repeat-password"><br><br>
+
+                        <input type="submit" value="Submit" id="submit">
+                    </b>
+                </form>
+            </div>
+        </div>
+        </body>
+
+
+        <script>
+
+            function validateForm(){
+
+                username = document.forms["form"]["username"].value;
+                email = document.forms["form"]["email"].value;
+                password = document.forms["form"]["password"].value;
+                password2 = document.forms["form"]["repeat-password"].value;
+
+                if(username == "" || username.length<3){
+                    alert("Username too short");
+                }else if(email == ""){
+                    alert("Email Id Required with @");
+                }else if(password == "" || password.length <6){
+                    alert("Password must be at least 6 characters");   
+                }else if (password != password2){
+                    alert("Password must be same as previeous one");
+                }
+            }
+
+            function highlightInput(elm){
+                elm.style.background="white";
+                
+                    }  
+
+
+            function newFunc(b){
+                b.style.background = "pink";
+                    }  
+
+        </script>
+    
+</html>
